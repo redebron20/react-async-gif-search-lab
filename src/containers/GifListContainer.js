@@ -8,7 +8,7 @@ class GiftListContainer extends Component {
         gifs: []
     }
 
-    fetchGIFs = (query = "toddlers") => {
+    fetchGIFs = (query) => {
         fetch(`https://api.giphy.com/v1/gifs/search?q=${query}&api_key=L7QbQ6w6R6tbZOE8qrTdNiQQe16CDcht&limit=3`)
           .then(res => res.json())
           .then(({data}) => {
